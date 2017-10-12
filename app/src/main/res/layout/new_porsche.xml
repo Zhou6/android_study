@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/new_prosche_bg"
+    android:layout_width="match_parent"
+    android:layout_height="253dp">
+
+    <ImageView
+        android:id="@+id/ring1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        android:src="@drawable/new_porsche_ring" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/new_porsche_black" />
+
+    <ImageView
+        android:id="@+id/new_porsche_car1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/new_porsche_car" />
+
+    <ImageView
+        android:id="@+id/new_porsche_car2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/new_porsche_car" />
+
+    <RelativeLayout
+        android:id="@+id/second_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--<ImageView-->
+        <!--android:id="@+id/ring2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:alpha="0"-->
+        <!--android:src="@drawable/new_porsche_ring" />-->
+
+        <ImageView
+            android:id="@+id/porsche_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:alpha="0"
+            android:src="@drawable/new_porsche_front" />
+
+        <FrameLayout
+            android:id="@+id/porsche_left_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:alpha="0">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/new_porsche_left" />
+
+            <ImageView
+                android:id="@+id/left_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/new_porsche_small" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/porsche_right_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:alpha="0"
+            android:rotationY="180">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/new_porsche_left" />
+
+            <ImageView
+                android:id="@+id/right_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/new_porsche_small" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/porsche_middel_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:alpha="0">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/new_porsche_middle" />
+
+            <ImageView
+                android:id="@+id/middle_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/new_porsche_big" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/porsche_under"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:alpha="0"
+            android:src="@drawable/new_porsche_under" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:alpha="0">
+
+        <ImageView
+            android:id="@+id/porsche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/new_porsche" />
+
+        <com.zhou.test.view.FrameAnimation
+            android:id="@+id/shoe1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.zhou.test.view.FrameAnimation
+            android:id="@+id/shoe2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/shoe2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:layout_gravity="end|center_vertical"-->
+        <!--android:src="@drawable/shoe2_bg"/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/new_porsche_shoe_light2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/new_porsche_shoe_light" />
+
+        <RelativeLayout
+            android:id="@+id/girl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/porsche"
+            android:layout_centerHorizontal="true"
+            android:alpha="0">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/new_porsche_girls" />
+
+            <com.zhou.test.view.CircularImage
+                android:id="@+id/avatar1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="6.5dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/girl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/porsche"
+            android:layout_toRightOf="@id/girl1"
+            android:alpha="0">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/new_porsche_girls" />
+
+            <com.zhou.test.view.CircularImage
+                android:id="@+id/avatar2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="6.5dp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/car_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:alpha="0"
+            android:src="@drawable/new_porsche_car_light" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/star_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:src="@drawable/new_porsche_star1" />
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:src="@drawable/new_porsche_star2" />
+
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:src="@drawable/new_porsche_star3" />
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:src="@drawable/new_porsche_star4" />
+    </FrameLayout>
+
+</RelativeLayout>

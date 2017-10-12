@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhou.test">
+
+    <!-- package的意义是作为一个默认包，如果activity不在name中指定包名，会自动将package属性值加在前面；R包会在package名下 -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ShareApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.FujiAnim" />
+        <activity android:name=".activity.ExclusiveAnim" />
+        <activity android:name=".activity.BarrageActivity" />
+        <activity android:name=".activity.CarActivity" />
+        <activity android:name=".activity.SurfaceActivity" />
+        <activity android:name=".activity.FLLActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/fuji_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/fuji_bg" />
+
+    <ImageView
+        android:id="@+id/fuji_mount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/fuji_mount" />
+
+    <ImageView
+        android:id="@+id/fuji_left_cherry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-12dp"
+        android:alpha="0.5"
+        android:src="@drawable/fuji_left_cherry" />
+
+    <ImageView
+        android:id="@+id/fuji_left_cherry2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-12dp"
+        android:layout_marginLeft="-45dp"
+        android:src="@drawable/fuji_left_cherry" />
+
+    <ImageView
+        android:id="@+id/fuji_right_cherry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-12dp"
+        android:alpha="0.5"
+        android:src="@drawable/fuji_right_cherry" />
+
+    <ImageView
+        android:id="@+id/fuji_right_cherry2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-12dp"
+        android:layout_marginRight="-45dp"
+        android:src="@drawable/fuji_right_cherry" />
+
+    <RelativeLayout
+        android:id="@+id/rl_left"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:id="@+id/fuji_bg_cherry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/fuji_bg_cherry" />
+
+    <ImageView
+        android:id="@+id/fuji_left_cherry_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-20dp"
+        android:paddingBottom="80dp"
+        android:rotation="3"
+        android:src="@drawable/fuji_left_cherry_down" />
+
+    <ImageView
+        android:id="@+id/fuji_right_cherry_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="-5dp"
+        android:rotation="-3"
+        android:src="@drawable/fuji_right_cherry_down" />
+
+    <RelativeLayout
+        android:id="@+id/petals_rl"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/fuji_bg"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/fuji_left_up_cherry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fuji_left_up_cherry" />
+
+    <ImageView
+        android:id="@+id/fuji_left_cherry_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-33dp"
+        android:layout_marginTop="-83dp"
+        android:rotation="-3"
+        android:src="@drawable/fuji_left_cherry_up" />
+
+    <ImageView
+        android:id="@+id/left_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fuji_mount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-15dp"
+        android:alpha="0.5"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/fuji_heart_left" />
+
+    <ImageView
+        android:id="@+id/right_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fuji_mount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-15dp"
+        android:alpha="0.5"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/fuji_heart_left" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/final_petals"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleX="0"
+            android:scaleY="0"/>
+
+        <RelativeLayout
+            android:id="@+id/heart_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:alpha="0"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/heart1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="135dp"
+                android:layout_marginTop="25dp"
+                android:scaleX="1.3"
+                android:scaleY="1.3"
+                android:src="@drawable/fuji_heart_2" />
+
+            <ImageView
+                android:id="@+id/heart2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginTop="20dp"
+                android:scaleX="1.3"
+                android:scaleY="1.3"
+                android:src="@drawable/fuji_heart_3" />
+
+            <ImageView
+                android:id="@+id/heart3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="95dp"
+                android:scaleX="1.3"
+                android:scaleY="1.3"
+                android:src="@drawable/fuji_heart_4" />
+
+            <ImageView
+                android:id="@+id/heart4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="100dp"
+                android:scaleX="1.3"
+                android:scaleY="1.3"
+                android:src="@drawable/fuji_heart_5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/heart_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0"
+            android:background="@drawable/fuji_heart_1"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:id="@+id/avatal_rl"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="30dp"
+                android:background="#ffffff">
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/avatal_rl"
+                android:background="#ffffff">
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

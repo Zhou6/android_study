@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0"
+    android:background="@drawable/exclusive_bg">
+
+    <ImageView
+        android:id="@+id/point"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/exclusive_white_point"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/star_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:src="@drawable/exclusive_star_bg_1" />
+
+    <ImageView
+        android:id="@+id/star_bg2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:src="@drawable/exclusive_star_bg_2" />
+
+    <ImageView
+        android:id="@+id/star_bg3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:src="@drawable/exclusive_star_bg_3" />
+
+    <ImageView
+        android:id="@+id/star_bg4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:src="@drawable/exclusive_star_bg_4" />
+
+    <ImageView
+        android:id="@+id/star_bg5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:src="@drawable/exclusive_star_bg_5" />
+
+
+    <ImageView
+        android:id="@+id/stage_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-66dp"
+        android:alpha="0"
+        android:src="@drawable/exclusive_stage_border1" />
+
+
+    <ImageView
+        android:id="@+id/stage_border2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/stage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-66dp"
+        android:alpha="0"
+        android:src="@drawable/exclusive_stage_border2" />
+
+    <ImageView
+        android:id="@+id/stage_border3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/stage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-66dp"
+        android:alpha="0"
+        android:src="@drawable/exclusive_stage_border3" />
+
+    <ImageView
+        android:id="@+id/stage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:paddingBottom="60dp"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/exclusive_stage" />
+
+    <ImageView
+        android:id="@+id/stage_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/stage"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.3"
+        android:paddingBottom="-60dp"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/exclusive_stage_effect" />
+
+    <RelativeLayout
+        android:id="@+id/photo"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_above="@id/stage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-42dp"
+        android:alpha="0"
+        android:scaleX="0"
+        android:scaleY="0">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="145dp"
+            android:layout_height="195dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/exclusive_photo_border" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/left_light"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/stage"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="-50dp"
+        android:alpha="0"
+        android:paddingBottom="20dp"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+        android:src="@drawable/exclusive_left_light" />
+
+    <ImageView
+        android:id="@+id/right_light"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/stage"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="-50dp"
+        android:alpha="0"
+        android:paddingBottom="20dp"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+        android:src="@drawable/exclusive_right_light" />
+
+    <ImageView
+        android:id="@+id/center_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/stage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp"
+        android:paddingBottom="5dp"
+        android:alpha="0"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+        android:src="@drawable/exclusive_center_light" />
+
+    <ImageView
+        android:id="@+id/stage_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.7"
+        android:paddingBottom="75dp"
+        android:rotation="-5"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/exclusive_stage_light" />
+
+
+    <ImageView
+        android:id="@+id/stage_light2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.7"
+        android:paddingBottom="75dp"
+        android:rotation="5"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/exclusive_stage_light" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Z专属test</string>
+
+	<string name="your_count_is_over">你已經看完推薦的用戶，請等待到明天。</string>
+	<string name="your_countr_blank_tip">你還沒有獲得匹配，繼續看看那些推薦的用戶吧！</string>
+	<string name="video_player_tip1">上下滑動</string>
+	<string name="video_player_tip2">切換視頻</string>
+	<string name="video_player_tip3">左右滑動調整進度</string>
+	<string name="video_player_tip4">雙擊點贊</string>
+	<string name="video_player_gift">禮物</string>
+	<string name="zhima_verify">芝麻認證</string>
+	<string name="zhima_verified">芝麻認證已通過</string>
+	<string name="zhima_no_alipay">請先安裝支付寶，再進行芝麻認證</string>
+	<string name="zhima_need_China_ID">芝麻認證必須用中國大陸身份證號</string>
+	<string name="wallet_service_will_stop">現金錢包服務即將終止，請盡快將餘額提現。直播紅包服務不受影響</string>
+	<string name="live_PK_tips_leve5">主播等級達到5級開啟連麥PK功能，快快升級吧！\n</string>
+	<string name="live_PK_tips_cancel">同意取消嗎？確定後將終止連麥PK\n</string>
+	<string name="live_PK_tips_close">確定關閉直播嗎？關閉後將終止連麥PK\n</string>
+	<string name="live_PK_rule">由2個直播中主播進行視頻連線，在300秒內獲得愛豆數多的一方獲勝。</string>
+	<string name="live_PK_no_anchor1">當前沒有可以邀請的主播\r</string>
+	<string name="live_PK_no_anchor2">搜索一下吧\r</string>
+	<string name="live_pk_action_invite">開始邀請</string>
+	<string name="live_pk_action_select">選擇主播\r</string>
+	<string name="live_pk_action_accept">接受PK\r</string>
+	<string name="live_pk_action_prepare">準備PK</string>
+	<string name="live_pk_action_again">再來一局</string>
+	<string name="live_pk_invite">邀請</string>
+	<string name="live_pk">連麥PK\r</string>
+	<string name="live_pk_alert_appy">正在申請連麥PK\r</string>
+	<string name="live_pk_alert_invite">想邀請你連麥PK\r</string>
+	<string name="live_pk_alert_reject">拒絕了你的邀請\r</string>
+	<string name="live_pk_alert_no_reject">無應答，請稍後再試\r</string>
+	<string name="live_pk_labi">%s愛豆</string>
+	<string name="live_pk_win">%s贏了</string>
+	<string name="live_pk_draw">平局</string>
+	<string name="live_PK_tips_inviter_cancel">邀請人取消了本次邀請</string>
+	<string name="live_pk_tips_start">%1$s與%2$s開始PK，快用禮物支持喜歡的主播吧~</string>
+	<string name="live_pk_tips_leave">對方離開了，期待下次PK</string>
+	<string name="live_pk_tips_win">恭喜%s在PK中勝利~歡呼</string>
+	<string name="live_pk_tips_lose">加油！再來一次，爭取獲勝</string>
+	<string name="live_pk_tips_draw">%1$s與%2$sPK平局，好默契，再來一次~</string>
+	<string name="live_pk_start">開始</string>
+	<string name="live_pk_id">輸入 ID</string>
+	<string name="live_pk_no_live">未開播</string>
+	<string name="live_pk_in">PK中</string>
+</resources>
