@@ -26,6 +26,11 @@
         <activity android:name=".activity.CarActivity" />
         <activity android:name=".activity.SurfaceActivity" />
         <activity android:name=".activity.FLLActivity" />
+        <activity
+            android:name=".activity.TestImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_test_image"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

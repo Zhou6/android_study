@@ -20,7 +20,7 @@ public class Compress {
         Tinify.setKey(apiKey3);
         File[] files = null;
 //            Tinify.setProxy("http://user:pass@192.168.0.1:8080");
-        final int dur = 20;
+        final int dur = 3;
         String path = Compress.class.getResource("").toString();
         path = "/" + path.substring(path.indexOf("/") + 1);
         path = path.substring(0, path.lastIndexOf("/"));

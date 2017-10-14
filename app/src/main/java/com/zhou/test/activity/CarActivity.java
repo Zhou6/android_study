@@ -66,11 +66,9 @@ public class CarActivity extends AppCompatActivity {
 
                 findViewById(R.id.porsche_left_frame).setAlpha(1);
                 findViewById(R.id.porsche_right_frame).setAlpha(1);
-                findViewById(R.id.porsche_under).setAlpha(1);
 
                 findViewById(R.id.porsche_left_frame).setTranslationX((value - 1) * (UIHelper.dip2px(20) + findViewById(R.id.porsche_left_frame).getMeasuredWidth()));
                 findViewById(R.id.porsche_right_frame).setTranslationX((1 - value) * (UIHelper.dip2px(20) + findViewById(R.id.porsche_right_frame).getMeasuredWidth()));
-                findViewById(R.id.porsche_under).setTranslationY((1 - value) * (UIHelper.dip2px(15) + findViewById(R.id.porsche_under).getMeasuredHeight()));
             }
         });
 

@@ -56,6 +56,11 @@ android {
             }
         }
     }*/
+//    externalNativeBuild {
+//        ndkBuild {
+//            path 'jni/Android.mk'
+//        }
+//    }
 }
 
 dependencies {
@@ -70,5 +75,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
     compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.google.android.gms:play-services-ads:11.0.4'
+    compile 'com.google.android.gms:play-services-auth:11.0.4'
     testCompile 'junit:junit:4.12'
 }

@@ -133,15 +133,6 @@
                 android:src="@drawable/new_porsche_big" />
         </FrameLayout>
 
-        <ImageView
-            android:id="@+id/porsche_under"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
-            android:alpha="0"
-            android:src="@drawable/new_porsche_under" />
     </RelativeLayout>
 
     <RelativeLayout

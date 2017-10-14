@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new Model("新跑车", CarActivity.class));
         list.add(new Model("tz", SurfaceActivity.class));
         list.add(new Model("法拉利", FLLActivity.class));
+        list.add(new Model("遮挡", TestImageActivity.class));
     }
 
     private ConventionDialog conventionDialog;

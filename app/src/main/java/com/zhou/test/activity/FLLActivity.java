@@ -3,6 +3,7 @@ package com.zhou.test.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -28,6 +29,33 @@ public class FLLActivity extends AppCompatActivity {
         final ImageView light = (ImageView) findViewById(R.id.light);
         final FrameAnimation car = (FrameAnimation) findViewById(R.id.car);
         car.setGapTime(165);
+
+        final FrameAnimation rl2 = (FrameAnimation) findViewById(R.id.rl2);
+        rl2.setGapTime(50);
+        rl2.setRepeat(-1);
+
+        int[] rl2_bg = new int[]{
+                R.drawable.sports_car_round_01,
+                R.drawable.sports_car_round_02,
+                R.drawable.sports_car_round_03,
+                R.drawable.sports_car_round_04,
+                R.drawable.sports_car_round_05,
+                R.drawable.sports_car_round_06,
+                R.drawable.sports_car_round_07,
+                R.drawable.sports_car_round_08,
+                R.drawable.sports_car_round_09,
+                R.drawable.sports_car_round_09,
+                R.drawable.sports_car_round_08,
+                R.drawable.sports_car_round_07,
+                R.drawable.sports_car_round_06,
+                R.drawable.sports_car_round_05,
+                R.drawable.sports_car_round_04,
+                R.drawable.sports_car_round_03,
+                R.drawable.sports_car_round_02
+        };
+        rl2.setBitmapResoursID(rl2_bg);
+        rl2.start();
+
         int[] car_bg = new int[]{
                 R.drawable.sports_car_01,
                 R.drawable.sports_car_02,
@@ -42,6 +70,7 @@ public class FLLActivity extends AppCompatActivity {
                 R.drawable.sports_car_10,
                 R.drawable.sports_car_11};
         car.setBitmapResoursID(car_bg);
+        car.start();
         final FrameAnimation windows = (FrameAnimation) findViewById(R.id.windows);
         int[] window_bg = new int[]{
                 R.drawable.sports_car_windows_01,
@@ -52,7 +81,20 @@ public class FLLActivity extends AppCompatActivity {
                 R.drawable.sports_car_windows_06};
         windows.setBitmapResoursID(window_bg);
         windows.setGapTime(200);
-        car.start();
+
+        final ValueAnimator ovalAnim = ValueAnimator.ofFloat(0, 1).setDuration(1800);
+        ovalAnim.setRepeatMode(ValueAnimator.RESTART);
+        ovalAnim.setRepeatCount(5);
+        ovalAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                float value = (float) animation.getAnimatedValue();
+                findViewById(R.id.oval).setScaleX(value);
+                findViewById(R.id.oval).setScaleY(value);
+                findViewById(R.id.oval).setAlpha(1.3f - value);
+            }
+        });
+
         car.setOnFrameFinisedListener(new FrameAnimation.OnFrameFinishedListener() {
             @Override
             public void onStart() {
@@ -67,6 +109,7 @@ public class FLLActivity extends AppCompatActivity {
                         car_last.setVisibility(View.VISIBLE);
                         car.setVisibility(View.GONE);
                         windows.start();
+                        ovalAnim.start();
                     }
                 });
             }
@@ -76,9 +119,9 @@ public class FLLActivity extends AppCompatActivity {
         lightAnimator.setInterpolator(null);
         lightAnimator.setDuration(4000);
 
-        final ObjectAnimator lightAnimator2 = ObjectAnimator.ofFloat(light, "Alpha", 0, 0.25f, 0.5f, 0.75f, 1, 0, 1, 0, 1, 0, 1, 0);
+        final ObjectAnimator lightAnimator2 = ObjectAnimator.ofFloat(light, "Alpha", 0, 0.25f, 0.5f, 0.75f, 1, 0, 1, 0, 1, 0, 1, 0, 1);
         lightAnimator2.setStartDelay(1000);
-        lightAnimator2.setDuration(3500);
+        lightAnimator2.setDuration(4000);
         lightAnimator2.setInterpolator(null);
 
         final AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
@@ -135,11 +178,36 @@ public class FLLActivity extends AppCompatActivity {
 
             }
         });
-        lightAnimator2.addListener(new AnimatorListenerAdapter() {
+
+        final ObjectAnimator animator = ObjectAnimator.ofFloat(findViewById(R.id.rl_all), View.SCALE_X, 1, 1.5f).setDuration(800);
+        final ObjectAnimator animator2 = ObjectAnimator.ofFloat(findViewById(R.id.rl_all), View.SCALE_Y, 1, 1.5f).setDuration(800);
+        final ObjectAnimator animator3 = ObjectAnimator.ofFloat(findViewById(R.id.rl_all), View.ALPHA, 1, 0).setDuration(800);
+
+        alphaAnimation2.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                findViewById(R.id.oval).setAlpha(0);
+                animator.start();
+                animator2.start();
+                animator3.start();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        animator3.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
-//                endGiftAnim();
+                finish();
             }
         });
     }
+
 }

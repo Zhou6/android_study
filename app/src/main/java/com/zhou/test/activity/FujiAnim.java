@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.zhou.test.R;
-import com.zhou.test.view.DiffusionAnimator;
 import com.zhou.test.util.UIHelper;
+import com.zhou.test.view.DiffusionAnimator;
 
 public class FujiAnim extends AppCompatActivity {
 
