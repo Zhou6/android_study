@@ -21,15 +21,19 @@ import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 
 /**
- * 国际化
+ * 把石墨文档网页的翻译批量输出到国际化的文件里
  */
 public class Util {
     private static List<Content> list = new ArrayList<>();
-    private static int begin_row = 2;
-    private static int end_row = -1;
-    private static int begin_column = 1;
+    private static final int begin_row = 2;
+    private static final int end_row = -1;
+    private static final int begin_column = 1;
 
     private static final String shimo_id = "uKfstl7LUnMwaryZ?r=RDR4J/";//这个参数每次国际化都要改成石墨文档的url后面的参数
+
+    private static final String ModuleName = "InternationalUtil";
+    private static final String file_loaction = ModuleName + "/build";
+    private static final String need_to_output_file = "/app/src/main/res/";
 
     private static final String url = "https://api.shimo.im/files/";
     private static final String[] values_paths = {"values-zh-rCN", "values-zh", "values"};
@@ -61,21 +65,10 @@ public class Util {
         String path = Util.class.getResource("").toString();
         System.out.println(path);
         path = "/" + path.substring(path.indexOf("/") + 1);
-        int i = 0;
-        while (path.indexOf("/") != -1 && path.length() > 0) {
-            path = path.substring(0, path.lastIndexOf("/"));
-            if (i == 4) {
-                shimo_file_path = path;
-            }
-            if (i == 6) {
-                String gen_path = path + "/app/src/main/res/";
-                for (int a = 0; a < values_paths.length; a++) {
-                    values_paths[a] = gen_path + values_paths[a] + "/strings.xml";
-//                    System.out.println(values_paths[a]);
-                }
-                break;
-            }
-            i++;
+        shimo_file_path = path.substring(0, path.lastIndexOf(file_loaction) + file_loaction.length());
+        String gen_path = path.substring(0, path.lastIndexOf(ModuleName) - 1) + need_to_output_file;
+        for (int a = 0; a < values_paths.length; a++) {
+            values_paths[a] = gen_path + values_paths[a] + "/strings.xml";
         }
     }
 
@@ -103,19 +96,19 @@ public class Util {
         } catch (IOException e) {
             e.printStackTrace();
             contentBuffer = null;
-            System.out.println("error: " + url.toString());
+            System.out.println("error: " + url);
         } finally {
-            httpConn.disconnect();
+            if (httpConn != null) {
+                httpConn.disconnect();
+            }
         }
-        return contentBuffer.toString();
+        return contentBuffer != null ? contentBuffer.toString() : null;
     }
 
-    public static void updateExcel(List<Content> list) {
+    private static void updateExcel(List<Content> list) {
         try {
             File f = new File(shimo_file_path);
-            f.mkdirs();
-            File f1 = new File(f, "key.xls");
-            f1.createNewFile();
+            File f1 = new File(f, "国际化.xls");
             shimo_file_path = f1.getAbsolutePath();
             System.out.println("文档path:" + shimo_file_path);
             WritableWorkbook book = Workbook.createWorkbook(f1);
@@ -131,7 +124,7 @@ public class Util {
         }
     }
 
-    public static void readExcel() {
+    private static void readExcel() {
         String s[] = new String[4];
         try {
             Workbook book = Workbook.getWorkbook(new File(shimo_file_path));
@@ -161,7 +154,7 @@ public class Util {
         }
     }
 
-    public static void writeEndLine(String filename, String filePath) {
+    private static void writeEndLine(String filename, String filePath) {
         try {
             RandomAccessFile file0 = new RandomAccessFile(filePath, "rw");
             long start = file0.getFilePointer();

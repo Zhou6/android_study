@@ -2,8 +2,6 @@ apply plugin: 'java'
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/jxl.jar')
-
     compile "com.google.code.gson:gson:2.8.0"
 }
 
