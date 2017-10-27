@@ -9,4 +9,18 @@
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="NewFeedView">
+        <attr name="button_marginLeft" format="dimension" />
+        <attr name="button_marginRight" format="dimension" />
+        <attr name="button_marginTop" format="dimension" />
+        <attr name="button_marginBottom" format="dimension" />
+        <attr name="radius" format="dimension" />
+        <attr name="button_layout_alignParent">
+            <flag name="top" value="1" />
+            <flag name="left" value="2" />
+            <flag name="right" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+    </declare-styleable>
+
 </resources>

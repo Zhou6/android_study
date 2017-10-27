@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         list.add(new Model("富士山", FujiAnim.class));
-        list.add(new Model("主播专属礼物", ExclusiveAnim.class));
+        list.add(new Model("专属礼物", ExclusiveAnim.class));
         list.add(new Model("大喇叭", BarrageActivity.class));
         list.add(new Model("新跑车", CarActivity.class));
-        list.add(new Model("tz", SurfaceActivity.class));
+        list.add(new Model("贴纸", SurfaceActivity.class));
         list.add(new Model("法拉利", FLLActivity.class));
         list.add(new Model("遮挡", TestImageActivity.class));
     }
