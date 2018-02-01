@@ -1,16 +1,22 @@
 apply plugin: 'com.android.application'
-
+//apply plugin: 'com.android.databinding'
 android {
-    compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.zhou.test"
-        minSdkVersion 19
-        targetSdkVersion 24
+        minSdkVersion 21
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
+
+    dataBinding {
+        enabled true
+    }
+
     buildTypes {
 
         debug {
@@ -33,13 +39,13 @@ android {
         }
     }
 
-    /*buildTypes {
+    buildTypes {
         debug {
             debuggable true
             minifyEnabled false
             zipAlignEnabled true
             shrinkResources false
-            signingConfig signingConfigs.debug
+//            signingConfig signingConfigs.debug
             ndk {
                 abiFilters "armeabi-v7a"
             }
@@ -50,32 +56,52 @@ android {
             zipAlignEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.pro'
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
             ndk {
                 abiFilters "armeabi-v7a"
             }
         }
-    }*/
+    }
 //    externalNativeBuild {
 //        ndkBuild {
 //            path 'jni/Android.mk'
 //        }
 //    }
+
+//    sourceSets {
+//        main {
+//            manifest.srcFile 'AndroidManifest.xml'
+//            java.srcDirs = ['src']
+//            res.srcDirs += ['res', 'res-zxing', 'res-huanxin', 'res-ssdk', 'res-wawa']
+//            aidl.srcDirs = ['src']
+//            jniLibs.srcDirs = ['libs']
+//            assets.srcDirs += ['assets', 'assets-zxing']
+//        }
+//    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+//    compile project(':faceu')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
-    compile files('libs/nama.jar')
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:recyclerview-v7:24.2.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
-    compile 'com.android.support:support-v4:24.2.1'
-    compile 'com.google.android.gms:play-services-ads:11.0.4'
-    compile 'com.google.android.gms:play-services-auth:11.0.4'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.google.android.gms:play-services-ads:11.8.0'
+    implementation 'com.google.android.gms:play-services-auth:11.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
     testCompile 'junit:junit:4.12'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+
+
 }

@@ -54,6 +54,10 @@ public class NewFeedView extends RelativeLayout implements View.OnClickListener 
         initListener();
     }
 
+    public View getAddView() {
+        return parent_iv;
+    }
+
     private void initAttrs(AttributeSet attrs) {
         TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.NewFeedView);
         buttonMarginLeft = a.getDimensionPixelSize(R.styleable.NewFeedView_button_marginLeft, buttonMarginLeft);
@@ -221,13 +225,13 @@ public class NewFeedView extends RelativeLayout implements View.OnClickListener 
     }
 
     public interface ButtonClickListener {
-        void TextOnlyClickListner();
+        void TextOnlyClickListner(View v);
 
-        void RedPacketClickListner();
+        void RedPacketClickListner(View v);
 
-        void PhotoClickListner();
+        void PhotoClickListner(View v);
 
-        void RecordingClickListner();
+        void RecordingClickListner(View v);
     }
 
     private ButtonClickListener listener;
@@ -248,25 +252,25 @@ public class NewFeedView extends RelativeLayout implements View.OnClickListener 
                 break;
             case R.id.text_only:
                 if (listener != null) {
-                    listener.TextOnlyClickListner();
+                    listener.TextOnlyClickListner(v);
                 }
                 setAllAnimotion(false);
                 break;
             case R.id.red_packet:
                 if (listener != null) {
-                    listener.RedPacketClickListner();
+                    listener.RedPacketClickListner(v);
                 }
                 setAllAnimotion(false);
                 break;
             case R.id.photo:
                 if (listener != null) {
-                    listener.PhotoClickListner();
+                    listener.PhotoClickListner(v);
                 }
                 setAllAnimotion(false);
                 break;
             case R.id.recording:
                 if (listener != null) {
-                    listener.RecordingClickListner();
+                    listener.RecordingClickListner(v);
                 }
                 setAllAnimotion(false);
                 break;

@@ -1,7 +1,5 @@
 package com.zhou.test.model;
 
-import android.app.Activity;
-
 /**
  * @author zqm
  * @since 2017/9/22

@@ -1,6 +1,5 @@
 package com.zhou.test.activity;
 
-import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,12 +7,10 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -323,5 +320,7 @@ public class TestImageActivity extends AppCompatActivity {
         paint.setXfermode(null);
         iv.setImageBitmap(result);
     }
+
+    public int[] src = {R.drawable.fuji_heart_1, R.drawable.fuji_heart_2, R.drawable.fuji_heart_3, R.drawable.fuji_heart_4, R.drawable.fuji_heart_5};
 
 }

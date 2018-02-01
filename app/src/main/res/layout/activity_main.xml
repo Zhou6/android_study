@@ -10,6 +10,20 @@
         android:layout_height="wrap_content"
         android:text="dialog" />
 
+    <Button
+        android:id="@+id/music"
+        android:layout_toRightOf="@id/dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="soundPool" />
+
+    <Button
+        android:id="@+id/music2"
+        android:layout_toEndOf="@id/music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mediaPlayer" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/all"
         android:layout_width="match_parent"

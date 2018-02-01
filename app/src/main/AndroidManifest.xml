@@ -5,6 +5,14 @@
     <!-- package的意义是作为一个默认包，如果activity不在name中指定包名，会自动将package属性值加在前面；R包会在package名下 -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:name=".ShareApplication"
@@ -24,13 +32,39 @@
         <activity android:name=".activity.ExclusiveAnim" />
         <activity android:name=".activity.BarrageActivity" />
         <activity android:name=".activity.CarActivity" />
-        <activity android:name=".activity.SurfaceActivity" />
         <activity android:name=".activity.FLLActivity" />
         <activity
             android:name=".activity.TestImageActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_test_image"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".activity.TransitionActivity"
+            android:theme="@style/MediaPlayCustomStyle" />
+        <activity
+            android:name=".activity.ShareAnimActivity"
+            android:label="@string/title_activity_share_anim" />
+        <activity android:name=".activity.ShareAnim2" />
+        <!--<activity-->
+        <!--android:name="com.faceunity.fulivedemo.FaceUMainActivity"-->
+        <!--android:screenOrientation="portrait">-->
+
+        <!--&lt;!&ndash; <intent-filter> &ndash;&gt;-->
+        <!--&lt;!&ndash; <action android:name="android.intent.action.MAIN" /> &ndash;&gt;-->
+
+
+        <!--&lt;!&ndash; <category android:name="android.intent.category.LAUNCHER" /> &ndash;&gt;-->
+        <!--&lt;!&ndash; </intent-filter> &ndash;&gt;-->
+        <!--</activity>-->
+        <!--<activity-->
+        <!--android:name="com.faceunity.fulivedemo.FUDualInputToTextureExampleActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/FullScreenTheme" />-->
+        <!--<activity-->
+        <!--android:name="com.faceunity.fulivedemo.FURenderToNV21ImageExampleActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/FullScreenTheme" />-->
+        <activity android:name=".activity.BoomActivity" />
     </application>
 
 </manifest>

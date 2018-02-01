@@ -43,6 +43,11 @@ public class UIHelper {
     }
 
 
+    public static int px2dip(float pxValue) {
+        final float scale = ShareApplication.getInstance().getResources().getDisplayMetrics().density;
+        return (int) (pxValue / scale + 0.5f);
+    }
+
     public static int dip2px(double dpValue) {
         final float scale = ShareApplication.getInstance().getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);

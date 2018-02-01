@@ -20,4 +20,5 @@ public class ShareApplication extends Application {
         super.onCreate();
         sInstance = this;
     }
+
 }
