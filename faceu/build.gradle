@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            zipAlignEnabled true
+//            shrinkResources false
+//            signingConfig signingConfigs.debug
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            zipAlignEnabled true
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.pro'
+//            signingConfig signingConfigs.release
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+//            manifest.srcFile 'AndroidManifest.xml'
+//            java.srcDirs = ['src']
+//            res.srcDirs += ['res', 'res-zxing', 'res-huanxin', 'res-ssdk', 'res-wawa']
+//            aidl.srcDirs = ['src']
+            jniLibs.srcDirs = ['libs']
+//            assets.srcDirs += ['assets', 'assets-zxing']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'org.adw.library:discrete-seekbar:1.0.1'
+    testCompile 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}

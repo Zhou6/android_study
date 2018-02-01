@@ -1,1 +1,1 @@
-include ':app', ':InternationalUtil', "compress"
+include ':app', ':InternationalUtil', "compress", "faceu"

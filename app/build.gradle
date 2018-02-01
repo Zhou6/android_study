@@ -81,7 +81,7 @@ android {
 }
 
 dependencies {
-//    compile project(':faceu')
+    compile project(':faceu')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support:design:26.1.0'

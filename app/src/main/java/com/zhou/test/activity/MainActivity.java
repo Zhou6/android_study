@@ -23,6 +23,7 @@ import android.view.WindowManager;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
+import com.faceunity.fulivedemo.FaceUMainActivity;
 import com.zhou.test.R;
 import com.zhou.test.ShareApplication;
 import com.zhou.test.model.Model;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new Model("法拉利", FLLActivity.class));
         list.add(new Model("遮挡", TestImageActivity.class));
         list.add(new Model("共享元素", ShareAnimActivity.class));
-//        list.add(new Model("贴纸", FaceUMainActivity.class));
+        list.add(new Model("贴纸", FaceUMainActivity.class));
         list.add(new Model("爆炸", BoomActivity.class));
     }
 

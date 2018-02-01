@@ -45,25 +45,17 @@
             android:name=".activity.ShareAnimActivity"
             android:label="@string/title_activity_share_anim" />
         <activity android:name=".activity.ShareAnim2" />
-        <!--<activity-->
-        <!--android:name="com.faceunity.fulivedemo.FaceUMainActivity"-->
-        <!--android:screenOrientation="portrait">-->
-
-        <!--&lt;!&ndash; <intent-filter> &ndash;&gt;-->
-        <!--&lt;!&ndash; <action android:name="android.intent.action.MAIN" /> &ndash;&gt;-->
-
-
-        <!--&lt;!&ndash; <category android:name="android.intent.category.LAUNCHER" /> &ndash;&gt;-->
-        <!--&lt;!&ndash; </intent-filter> &ndash;&gt;-->
-        <!--</activity>-->
-        <!--<activity-->
-        <!--android:name="com.faceunity.fulivedemo.FUDualInputToTextureExampleActivity"-->
-        <!--android:screenOrientation="portrait"-->
-        <!--android:theme="@style/FullScreenTheme" />-->
-        <!--<activity-->
-        <!--android:name="com.faceunity.fulivedemo.FURenderToNV21ImageExampleActivity"-->
-        <!--android:screenOrientation="portrait"-->
-        <!--android:theme="@style/FullScreenTheme" />-->
+        <activity
+            android:name="com.faceunity.fulivedemo.FaceUMainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.faceunity.fulivedemo.FUDualInputToTextureExampleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="com.faceunity.fulivedemo.FURenderToNV21ImageExampleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
         <activity android:name=".activity.BoomActivity" />
     </application>
 
