@@ -68,16 +68,16 @@ android {
 //        }
 //    }
 
-//    sourceSets {
-//        main {
+    sourceSets {
+        main {
 //            manifest.srcFile 'AndroidManifest.xml'
 //            java.srcDirs = ['src']
 //            res.srcDirs += ['res', 'res-zxing', 'res-huanxin', 'res-ssdk', 'res-wawa']
 //            aidl.srcDirs = ['src']
-//            jniLibs.srcDirs = ['libs']
+            jniLibs.srcDirs = ['libs']
 //            assets.srcDirs += ['assets', 'assets-zxing']
-//        }
-//    }
+        }
+    }
 }
 
 dependencies {
